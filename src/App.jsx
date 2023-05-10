@@ -1,16 +1,12 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-// import './App.css'
+import Home from "./components/Home";
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
-      <h1 className="bg-red-300">Hello world</h1>
-    </>
-  )
+    <main className="w-screen h-screen bg-no-repeat bg-cover bg-[url('/writing_bg7.jpg')]">
+      <div className="w-full h-[10vh] bg-[rgba(0,0,0,0.75)] text-3xl flex items-center justify-center text-white">Nav</div>
+      <Home />
+    </main>
+  );
 }
 
-export default App
+export default App;
