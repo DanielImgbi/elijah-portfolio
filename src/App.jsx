@@ -1,9 +1,11 @@
+import About from "./components/About";
 import Home from "./components/Home";
 
 function App() {
   return (
-    <main className="w-screen h-screen bg-no-repeat bg-cover bg-[url('/writing_bg7.jpg')]">
+    <main className="App max-w-screen max-h-screen bg-cover bg-no-repeat bg-[url('/writing_bg7.jpg')]">
       <Home />
+      <About />
     </main>
   );
 }
