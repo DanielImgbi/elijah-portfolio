@@ -2,11 +2,14 @@
 
 const About = () => {
   return (
-    <section id="about" className="w-full flex flex-col bg-[rgba(0,0,0,0.85)] md:p-10 ">
+    <section
+      id="about"
+      className="w-full flex flex-col bg-[rgba(0,0,0,0.85)] md:p-10 "
+    >
       <h1 className="text-gray-200 opacity-30 text-[40px] px-1 py-10 font-extrabold text-center tracking-[0.4em] md:p-5 md:text-7xl">
         ABOUT ME
       </h1>
-      <div className="flex">
+      <div className="flex flex-col space-y-5 px-5 py-5">
         <div className="text-white text-center">
           <h2 className="text-white text-3xl font-bold p-3 leading-[45px] md:text-3xl">
             I&apos;m <span className="text-green-600">Elijah Chukwudi</span>, a
@@ -25,7 +28,25 @@ const About = () => {
           </p>
         </div>
         <div>
-
+          <ul className="flex flex-col py-5">
+            <li className="py-2 border-b-[1px] border-[rgba(200,200,200,0.19)] text-lg text-gray-300">
+              <span className="font-semibold">Name:</span> Elijah Chukwudi
+            </li>
+            <li className="py-2 text-green-600  border-b-[1px] border-[rgba(200,200,200,0.19)] text-lg ">
+              <span className="font-semibold text-gray-300">Email:</span>{" "}
+              example@mail.com
+            </li>
+            <li className="py-2 border-b-[1px] border-[rgba(200,200,200,0.19)] text-lg text-gray-300">
+              <span className="font-semibold">Age:</span> 27 years
+            </li>
+            <li className="py-2 text-green-600  border-b-[1px] border-[rgba(200,200,200,0.19)] text-lg ">
+              <span className="font-semibold text-gray-300">From:</span>
+              PortHarcourt, Nigeria
+            </li>
+          </ul>
+          <a href="/elijah_CV.pdf" className="bg-green-400 px-4 py-3 rounded-full shadow-md text-lg text-white font-bold hover:bg-green-500" download>
+            Download CV
+          </a>
         </div>
       </div>
     </section>
