@@ -1,49 +1,50 @@
 import { FaArrowDown } from "react-icons/fa";
 import { motion } from "framer-motion";
-import { useState, useLayoutEffect } from "react";
+import { useState } from "react";
 
 const Home = () => {
-  const [skill, setSkill] = useState("");
-  const skills = [
-    "I'm a Freelancer. ",
-    "I'm a Content Writer. ",
-    "I'm a Graphics Designer. ",
-  ];
-  let i = 0;
-  let e = 0;
-  let isComplete = false;
-  let canDelete = false;
-  let holder = "";
-  useLayoutEffect(() => writeEffect(), []);
+  // eslint-disable-next-line no-unused-vars
+  const [skill, setSkill] = useState("I'm a Graphics Designer.");
+  // const skills = [
+  //   "I'm a Freelancer. ",
+  //   "I'm a Content Writer. ",
+  //   "I'm a Graphics Designer. ",
+  // ];
+  // let i = 0;
+  // let e = 0;
+  // let isComplete = false;
+  // let canDelete = false;
+  // let holder = "";
+  // useLayoutEffect(() => writeEffect(), []);
 
-  // Writting Effect Algorithm
-  const writeEffect = () => {
-    setInterval(() => {
-      const test = (text) => setSkill(skill + text);
-      if (i < skills.length) {
-        let curSkill = skills[i];
-        if (e < curSkill.length && isComplete === false) {
-          holder += curSkill[e];
-          test(holder);
-          e++;
-          if (e === curSkill.length) {
-            isComplete = true;
-            canDelete = true;
-          }
-        } else if (e !== 0 && canDelete === true) {
-          holder = holder.slice(0, e - 2);
-          test(holder);
-          e--;
-        } else {
-          isComplete = false;
-          canDelete = false;
-          i++;
-        }
-      } else {
-        i = 0;
-      }
-    }, 300);
-  };
+  // // Writting Effect Algorithm
+  // const writeEffect = () => {
+  //   setInterval(() => {
+  //     const test = (text) => setSkill(skill + text);
+  //     if (i < skills.length) {
+  //       let curSkill = skills[i];
+  //       if (e < curSkill.length && isComplete === false) {
+  //         holder += curSkill[e];
+  //         test(holder);
+  //         e++;
+  //         if (e === curSkill.length) {
+  //           isComplete = true;
+  //           canDelete = true;
+  //         }
+  //       } else if (e !== 0 && canDelete === true) {
+  //         holder = holder.slice(0, e - 2);
+  //         test(holder);
+  //         e--;
+  //       } else {
+  //         isComplete = false;
+  //         canDelete = false;
+  //         i++;
+  //       }
+  //     } else {
+  //       i = 0;
+  //     }
+  //   }, 300);
+  // };
 
   return (
     <main
