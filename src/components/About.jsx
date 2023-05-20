@@ -1,5 +1,4 @@
 import { motion } from "framer-motion";
-import { motion } from "framer-motion";
 
 const About = () => {
   return (
@@ -8,12 +7,8 @@ const About = () => {
       className="w-full flex flex-col bg-black py-5 space-y-10 md:p-10 md:px-16 md:space-y-16"
     >
       <h1 className="text-gray-200 opacity-30 text-[40px] px-1 font-extrabold text-center tracking-[0.4em] md:p-5 md:text-7xl">
-      <h1 className="text-gray-200 opacity-30 text-[40px] px-1 font-extrabold text-center tracking-[0.4em] md:p-5 md:text-7xl">
         ABOUT ME
       </h1>
-      <div className="flex flex-col space-y-5 px-5 md:flex-row md:space-y-0 md:space-x-10">
-        <div className="text-white text-center space-y-5 md:text-start md:w-3/5 md:space-y-7">
-          <h2 className="text-white text-3xl font-bold leading-[45px] md:text-4xl">
       <div className="flex flex-col space-y-5 px-5 md:flex-row md:space-y-0 md:space-x-10">
         <div className="text-white text-center space-y-5 md:text-start md:w-3/5 md:space-y-7">
           <h2 className="text-white text-3xl font-bold leading-[45px] md:text-4xl">
