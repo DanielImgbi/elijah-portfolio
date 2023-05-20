@@ -1,55 +1,53 @@
 import { FaArrowDown } from "react-icons/fa";
 import { motion } from "framer-motion";
-import { useState } from "react";
+import { useState, useLayoutEffect } from "react";
 
 const Home = () => {
-  // eslint-disable-next-line no-unused-vars
-  const [skill, setSkill] = useState("I'm a Graphics Designer.");
-  // const skills = [
-  //   "I'm a Freelancer. ",
-  //   "I'm a Content Writer. ",
-  //   "I'm a Graphics Designer. ",
-  // ];
-  // let i = 0;
-  // let e = 0;
-  // let isComplete = false;
-  // let canDelete = false;
-  // let holder = "";
-  // useLayoutEffect(() => writeEffect(), []);
+  const [skill, setSkill] = useState("");
+  const skills = [
+    "I'm a Freelancer. ",
+    "I'm a Content Writer. ",
+    "I'm a Graphics Designer. ",
+  ];
+  let i = 0;
+  let e = 0;
+  let isComplete = false;
+  let canDelete = false;
+  let holder = "";
+  useLayoutEffect(() => writeEffect(), []);
 
-  // // Writting Effect Algorithm
-  // const writeEffect = () => {
-  //   setInterval(() => {
-  //     const test = (text) => setSkill(skill + text);
-  //     if (i < skills.length) {
-  //       let curSkill = skills[i];
-  //       if (e < curSkill.length && isComplete === false) {
-  //         holder += curSkill[e];
-  //         test(holder);
-  //         e++;
-  //         if (e === curSkill.length) {
-  //           isComplete = true;
-  //           canDelete = true;
-  //         }
-  //       } else if (e !== 0 && canDelete === true) {
-  //         holder = holder.slice(0, e - 2);
-  //         test(holder);
-  //         e--;
-  //       } else {
-  //         isComplete = false;
-  //         canDelete = false;
-  //         i++;
-  //       }
-  //     } else {
-  //       i = 0;
-  //     }
-  //   }, 300);
-  // };
+  // Writting Effect Algorithm
+  const writeEffect = () => {
+    const test = (text) => setSkill(skill + text);
+    if (i < skills.length) {
+      let curSkill = skills[i];
+      if (e < curSkill.length && isComplete === false) {
+        holder += curSkill[e];
+        test(holder);
+        e++;
+        if (e === curSkill.length) {
+          isComplete = true;
+          canDelete = true;
+        }
+      } else if (e !== 0 && canDelete === true) {
+        holder = holder.slice(0, e - 2);
+        test(holder);
+        e--;
+      } else {
+        isComplete = false;
+        canDelete = false;
+        i++;
+      }
+    } else {
+      i = 0;
+    }
+    setTimeout(() => writeEffect(), 250);
+  };
 
   return (
     <main
       id="home"
-      className="w-full h-[90vh] bg-[rgba(0,0,0,0.75)] flex flex-col items-center justify-center text-white space-y-7"
+      className="w-full h-[90vh] bg-[rgba(0,0,0,0.70)] flex flex-col items-center justify-center text-white space-y-7"
     >
       <motion.h2
         initial={{ z: -4 }}
@@ -79,6 +77,7 @@ const Home = () => {
         href="#see"
         animate={{ x: 0 }}
         initial={{ x: "100vw" }}
+        whileHover={{ scale: 1.1 }}
         transition={{ type: "spring", stiffness: 90 }}
         className="text-green-600 px-7 py-3 rounded-full border border-green-600 md:border-2 hover:bg-green-600 hover:text-white hover:font-semibold"
       >
