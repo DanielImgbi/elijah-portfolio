@@ -48,7 +48,7 @@ const About = () => {
             download
             whileHover={{ scale: 1.1 }}
             href="/elijah_CV.pdf"
-            className="w-fit bg-green-500 px-7 py-[10px] rounded-full shadow-md text-lg text-white font-bold hover:bg-green-600"
+            className="w-[150px] flex justify-center items-center py-3   bg-green-500 rounded-full shadow-md text-lg text-white font-bold hover:bg-green-600"
           >
             Download CV
           </motion.a>
