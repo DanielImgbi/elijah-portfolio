@@ -47,7 +47,7 @@ const Home = () => {
   return (
     <main
       id="home"
-      className="w-full h-[90vh] bg-[rgba(0,0,0,0.70)] flex flex-col items-center justify-center text-white space-y-7"
+      className="w-full h-[100vh] bg-[rgba(0,0,0,0.70)] flex flex-col items-center justify-center text-white space-y-7"
     >
       <motion.h2
         initial={{ z: -4 }}
